@@ -13,9 +13,9 @@ export const navConfig = [
 		path: paths.public.root,
 	},
 	{
-		title: "About",
+		title: "Contact",
 		icon: <Iconify icon="mdi:faq" />,
-		path: paths.public.about,
+		path: paths.public.contact,
 	},
 	// {
 	// 	title: "Pages",

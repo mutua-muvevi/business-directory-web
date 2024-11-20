@@ -44,7 +44,7 @@ export const paths = {
 	public: {
 		root: "/",
 		about: `${ROOTS.PUBLIC}/about`,
-		contact: `${ROOTS.PUBLIC}/contact`,
+		contact: `/contact`,
 
 		terms: `${ROOTS.PUBLIC}/terms`,
 		privacy: `${ROOTS.PUBLIC}/privacy`,
