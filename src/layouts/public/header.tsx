@@ -30,6 +30,7 @@ import LoginButton from "../common/login-button";
 import HeaderShadow from "../common/header-shadow";
 // import Search from "@/sections/search/search";
 import SettingsButton from "../common/settings-button";
+import LanguagePopover from "../common/language-popover";
 
 // ----------------------------------------------------------------------
 
@@ -63,7 +64,10 @@ const Header = () => {
 					}),
 				}}
 			>
-				<Container sx={{ height: 1, display: "flex", alignItems: "center" }} maxWidth="xl">
+				<Container
+					sx={{ height: 1, display: "flex", alignItems: "center" }}
+					maxWidth="xl"
+				>
 					<Badge
 						sx={{
 							[`& .${badgeClasses.badge}`]: {
@@ -81,7 +85,11 @@ const Header = () => {
 							>
 								<Label
 									color="info"
-									sx={{ textTransform: "unset", height: 22, px: 0.5 }}
+									sx={{
+										textTransform: "unset",
+										height: 22,
+										px: 0.5,
+									}}
 								>
 									v5.7.0
 								</Label>
@@ -92,10 +100,6 @@ const Header = () => {
 					</Badge>
 
 					<Box sx={{ flexGrow: 1 }} />
-{/* 
-					<Search/>
-
-					<Box sx={{ flexGrow: 1 }} /> */}
 
 					{mdUp && <NavDesktop data={navConfig} />}
 
@@ -103,7 +107,6 @@ const Header = () => {
 						alignItems="center"
 						direction={{ xs: "row", md: "row-reverse" }}
 					>
-
 						{mdUp && <LoginButton />}
 
 						<SettingsButton
@@ -112,6 +115,8 @@ const Header = () => {
 								mr: { md: 2 },
 							}}
 						/>
+
+						<LanguagePopover />
 
 						{!mdUp && <NavMobile data={navConfig} />}
 					</Stack>

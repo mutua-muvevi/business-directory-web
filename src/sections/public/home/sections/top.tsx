@@ -151,7 +151,7 @@ const HomeTop = () => {
 					
 					
 					
-					<FilterForm handleSearchSubmit={handleSearchSubmit}/>
+					<FilterForm handleSearchSubmit={handleSearchSubmit} setFilters={setFilters}/>
 
 					
 				</Box>

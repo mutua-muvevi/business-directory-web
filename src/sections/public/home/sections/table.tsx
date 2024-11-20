@@ -1,4 +1,7 @@
-import React from "react";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { styled } from "@mui/material";
 
@@ -67,6 +70,7 @@ const SearchTable = ({ data }) => {
 		const filteredData = data.find((row) => row._id === params.row._id)
 		// setSelectedRow(filteredData);
 		console.log("P{ARAMS", params)
+		console.log("Filtered data", filteredData)
 
 		// TODO: call the function that fetches this particular business
 		
