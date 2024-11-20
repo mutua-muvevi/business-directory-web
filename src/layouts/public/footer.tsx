@@ -25,7 +25,6 @@ const LINKS = [
 		children: [
 			{ name: "About us", href: paths.public.about },
 			{ name: "Contact us", href: paths.public.contact },
-			{ name: "FAQs", href: paths.public.faqs },
 		],
 	},
 	{

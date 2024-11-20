@@ -108,7 +108,7 @@ export const palette = (mode: "light" | "dark") => {
 			disabled: grey[500],
 		},
 		background: {
-			paper: "#FFFFFF",
+			paper: grey[200],
 			default: "#FFFFFF",
 			neutral: grey[200],
 		},

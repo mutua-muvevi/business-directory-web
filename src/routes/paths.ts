@@ -1,4 +1,4 @@
-import { paramCase } from "@/utils/change-case";
+
 
 //----------------------------------------------------------------
 
@@ -43,22 +43,11 @@ export const paths = {
 	},
 	public: {
 		root: "/",
-
-		// pages
-		articles: `${ROOTS.PUBLIC}/articles`,
-		article_detail: (slug: string) => `${ROOTS.PUBLIC}/article/${paramCase(slug)}`,
-
-		faqs: `${ROOTS.PUBLIC}/faqs`,
 		about: `${ROOTS.PUBLIC}/about`,
 		contact: `${ROOTS.PUBLIC}/contact`,
-		products: `${ROOTS.PUBLIC}/products`,
 
 		terms: `${ROOTS.PUBLIC}/terms`,
 		privacy: `${ROOTS.PUBLIC}/privacy`,
-
-		business: `${ROOTS.PUBLIC}/business`,
-		transporter: `${ROOTS.PUBLIC}/transporter`,
-		pricing: `${ROOTS.PUBLIC}/pricing`,
 	},
 	app: {
 		root: ROOTS.APP,

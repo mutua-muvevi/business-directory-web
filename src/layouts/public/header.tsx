@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import AppBar from "@mui/material/AppBar";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
 import { useTheme } from "@mui/material/styles";
 import Container from "@mui/material/Container";
@@ -28,6 +28,7 @@ import { HEADER } from "../config-layout";
 import { navConfig } from "./config-navigation";
 import LoginButton from "../common/login-button";
 import HeaderShadow from "../common/header-shadow";
+// import Search from "@/sections/search/search";
 import SettingsButton from "../common/settings-button";
 
 // ----------------------------------------------------------------------
@@ -62,7 +63,7 @@ const Header = () => {
 					}),
 				}}
 			>
-				<Container sx={{ height: 1, display: "flex", alignItems: "center" }}>
+				<Container sx={{ height: 1, display: "flex", alignItems: "center" }} maxWidth="xl">
 					<Badge
 						sx={{
 							[`& .${badgeClasses.badge}`]: {
@@ -91,6 +92,10 @@ const Header = () => {
 					</Badge>
 
 					<Box sx={{ flexGrow: 1 }} />
+{/* 
+					<Search/>
+
+					<Box sx={{ flexGrow: 1 }} /> */}
 
 					{mdUp && <NavDesktop data={navConfig} />}
 
@@ -98,14 +103,6 @@ const Header = () => {
 						alignItems="center"
 						direction={{ xs: "row", md: "row-reverse" }}
 					>
-						<Button
-							variant="contained"
-							target="_blank"
-							rel="noopener"
-							href={paths.minimalUI}
-						>
-							Purchase Now
-						</Button>
 
 						{mdUp && <LoginButton />}
 

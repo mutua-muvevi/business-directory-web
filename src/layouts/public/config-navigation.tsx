@@ -17,26 +17,6 @@ export const navConfig = [
 		icon: <Iconify icon="mdi:faq" />,
 		path: paths.public.about,
 	},
-	{
-		title: "Business",
-		icon: <Iconify icon="material-symbols:add-business" />,
-		path: paths.public.business,
-	},
-	{
-		title: "Truck Owner",
-		icon: <Iconify icon="mdi:truck" />,
-		path: paths.public.transporter,
-	},
-	{
-		title: "Pricing",
-		icon: <Iconify icon="fa6-solid:circle-info" />,
-		path: paths.public.pricing,
-	},
-	{
-		title: "Articles",
-		icon: <Iconify icon="ph:article-medium-fill" />,
-		path: paths.public.articles,
-	},
 	// {
 	// 	title: "Pages",
 	// 	path: "/pages",

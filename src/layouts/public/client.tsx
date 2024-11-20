@@ -2,7 +2,7 @@
 
 import Box from "@mui/material/Box";
 import { usePathname } from "next/navigation";
-import Footer from "./footer";
+// import Footer from "./footer";
 import Header from "./header";
 
 interface ClientSideLayoutProps {
@@ -28,8 +28,6 @@ export const PublicClientSideLayout = ({ children }: ClientSideLayoutProps) => {
 			>
 				{children}
 			</Box>
-
-			<Footer />
 		</Box>
 	);
 };
