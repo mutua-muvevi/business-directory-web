@@ -11,10 +11,8 @@ import Drawer, { drawerClasses } from "@mui/material/Drawer";
 import Iconify from "../../iconify";
 import Scrollbar from "../../scrollbar";
 import BaseOptions from "./base-option";
-import LayoutOptions from "./layout-options";
 import PresetsOptions from "./preset-options";
 import { useSettingsContext } from "../context";
-import FullScreenOption from "./fullscreen-option";
 import { useTranslate } from "@/locales";
 
 const SettingsDrawer = () => {
@@ -62,50 +60,6 @@ const SettingsDrawer = () => {
 		</div>
 	);
 
-	const renderContrast = (
-		<div>
-			<Typography variant="caption" component="div" sx={{ ...labelStyles }}>
-				{t("navigation.top.settings.contrast")}
-			</Typography>
-
-			<BaseOptions
-				value={settings.themeContrast}
-				onChange={(newValue) => settings.onUpdate("themeContrast", newValue)}
-				options={["default", "bold"]}
-				icons={["tabler:contrast-filled", "cil:contrast"]}
-			/>
-		</div>
-	);
-
-	const renderDirection = (
-		<div>
-			<Typography variant="caption" component="div" sx={{ ...labelStyles }}>
-				{t("navigation.top.settings.direction")}
-			</Typography>
-
-			<BaseOptions
-				value={settings.themeDirection}
-				onChange={(newValue) => settings.onUpdate("themeDirection", newValue)}
-				options={["ltr", "rtl"]}
-				icons={["fluent:align-left-20-filled", "fluent:align-right-20-filled"]}
-			/>
-		</div>
-	);
-
-	const renderLayout = (
-		<div>
-			<Typography variant="caption" component="div" sx={{ ...labelStyles }}>
-				{t("navigation.top.settings.layout")}
-			</Typography>
-
-			<LayoutOptions
-				value={settings.themeLayout}
-				onChange={(newValue) => settings.onUpdate("themeLayout", newValue)}
-				options={["vertical", "horizontal", "mini"]}
-			/>
-		</div>
-	);
-
 	const renderPresets = (
 		<div>
 			<Typography variant="caption" component="div" sx={{ ...labelStyles }}>
@@ -138,17 +92,17 @@ const SettingsDrawer = () => {
 				<Stack spacing={3} sx={{ p: 3 }}>
 					{renderMode}
 
-					{renderContrast}
+					{/* {renderContrast} */}
 
-					{renderDirection}
+					{/* {renderDirection} */}
 
-					{renderLayout}
+					{/* {renderLayout} */}
 
 					{renderPresets}
 				</Stack>
 			</Scrollbar>
 
-			<FullScreenOption />
+			{/* <FullScreenOption /> */}
 		</Drawer>
 	);
 };
