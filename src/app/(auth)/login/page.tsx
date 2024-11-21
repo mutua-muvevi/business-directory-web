@@ -8,6 +8,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import LoadingButton from "@mui/lab/LoadingButton";
 import Iconify from "@/components/iconify";
+import Link from "next/link";
 
 const Login = () => {
 	const [errorMsg, setErrorMsg] = useState("");
@@ -46,7 +47,7 @@ const Login = () => {
 	});
 
 	return (
-		<>
+		<Stack direction="column" spacing={3}>
 			{!!errorMsg && (
 				<Alert severity="error" sx={{ m: 3 }}>
 					{errorMsg}
@@ -122,7 +123,21 @@ const Login = () => {
 					</LoadingButton>
 				</Stack>
 			</FormProvider>
-		</>
+
+			<Stack direction="row">
+				<Typography variant="body2">Don&apos;t have an account?</Typography>
+
+				<Link href="/register" style={{textDecoration: "none", color: "inherit" }}>
+					<Typography
+						variant="body2"
+						component="span"
+						sx={{ ml: 1, color: "primary.main", cursor: "pointer" }}
+					>
+						Register
+					</Typography>
+				</Link>
+			</Stack>
+		</Stack>
 	);
 };
 

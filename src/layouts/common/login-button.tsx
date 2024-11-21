@@ -2,7 +2,7 @@ import Button from "@mui/material/Button";
 
 import { RouterLink } from "@/routes/components";
 
-import { PATH_AFTER_LOGIN } from "@/config-global";
+// import { PATH_AFTER_LOGIN } from "@/config-global";
 
 // ----------------------------------------------------------------------
 
@@ -14,7 +14,7 @@ const LoginButton = ({ sx }: LoginButtonProps) => {
 	return (
 		<Button
 			component={RouterLink}
-			href={PATH_AFTER_LOGIN}
+			href={"/login"}
 			variant="outlined"
 			sx={{ mr: 1, ...sx }}
 		>
