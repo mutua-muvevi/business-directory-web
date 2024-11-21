@@ -1,3 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+/* eslint-disable react/jsx-no-useless-fragment */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import Iconify from "@/components/iconify";
 import {
 	Container,
@@ -11,6 +17,7 @@ import {
 	Card,
 	CardContent,
 } from "@mui/material";
+import Link from "next/link";
 
 // Hardcoded reviews array
 const reviews = [
@@ -54,7 +61,8 @@ type BusinessBodyProps = {
 		coordinates: number[];
 	};
 	socialMedia: {
-		[platform: string]: string;
+		name: string;
+		link: string;
 	};
 	photos: string[];
 	thumbnail: string;
@@ -71,24 +79,73 @@ const BusinessBody: React.FC<BusinessBodyProps> = ({
 	photos,
 	thumbnail,
 }) => {
-
 	const leftSideItems = [
 		{
 			icon: <Iconify icon="dashicons:category" width={20} />,
 			value: category,
-			label: "Category"
+			label: "Category",
 		},
 		{
 			icon: <Iconify icon="uim:briefcase" width={20} />,
 			value: niche,
-			label: "Niche"
+			label: "Niche",
 		},
 		{
 			icon: <Iconify icon="solar:tag-price-bold-duotone" width={20} />,
 			value: priceRange,
-			label: "Price range"
+			label: "Price range",
 		},
-	]
+	];
+
+	const sortedSocialMedia = Array.isArray(socialMedia)
+		? socialMedia.map((social) => {
+				switch (social.name) {
+					case "facebook":
+						social.icon = (
+							<Iconify
+								icon="eva:facebook-fill"
+								width={20}
+								sx={{ color: "#1877F2" }}
+							/>
+						);
+						break;
+
+					case "twitter":
+						social.icon = (
+							<Iconify
+								icon="prime:twitter"
+								width={20}
+								sx={{ color: "#000000" }}
+							/>
+						);
+						break;
+
+					case "instagram":
+						social.icon = (
+							<Iconify
+								icon="basil:instagram-solid"
+								width={20}
+								sx={{ color: "#d62976" }}
+							/>
+						);
+						break;
+
+					case "linkedin":
+						social.icon = (
+							<Iconify
+								icon="eva:linkedin-fill"
+								width={20}
+								sx={{ color: "#0077B5" }}
+							/>
+						);
+						break;
+
+					default:
+						break;
+				}
+				return social; // Make sure to return the modified social object
+		  })
+		: socialMedia;
 
 	return (
 		<Stack direction="column">
@@ -271,37 +328,94 @@ const BusinessBody: React.FC<BusinessBodyProps> = ({
 								<iframe
 									src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31910.175176488086!2d36.895635399999996!3d-1.3122732000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1731854027110!5m2!1sen!2ske"
 									loading="lazy"
-									style={{ width: "100%", height: "30vh", borderRadius: "5px", marginTop: "20px" }}
+									style={{
+										width: "100%",
+										height: "30vh",
+										borderRadius: "5px",
+										marginTop: "20px",
+									}}
 								/>
 							</Stack>
 						)}
 					</Grid>
 					<Grid item xs={12} md={6} lg={4.5} xl={4}>
 						<Stack direction="column" spacing={3}>
-
-							<Card sx={{borderRadius: "5px"}}>
+							<Card sx={{ borderRadius: "5px" }}>
 								<CardContent>
 									<Stack direction="column" spacing={2}>
-										{
-											leftSideItems.map((el, i) => (
-												<Stack key={i} direction="row" spacing={2} alignItems="flex-start">
-													{el.icon}
+										<Typography variant="subtitle1">
+											More details
+										</Typography>
 
-													<Stack direction="column" spacing={1}>
-														<Typography variant="subtitle2" color="text.primary">
-															{el.label}
-														</Typography>
-														<Typography variant="body1" color="text.secondary">
-															{el.value}
-														</Typography>
-													</Stack>
+										{leftSideItems.map((el, i) => (
+											<Stack
+												key={i}
+												direction="row"
+												spacing={2}
+												alignItems="flex-start"
+											>
+												{el.icon}
+
+												<Stack
+													direction="column"
+													spacing={1}
+												>
+													<Typography
+														variant="subtitle2"
+														color="text.primary"
+													>
+														{el.label}
+													</Typography>
+													<Typography
+														variant="body1"
+														color="text.secondary"
+													>
+														{el.value}
+													</Typography>
 												</Stack>
-											))
-										}
+											</Stack>
+										))}
 									</Stack>
 								</CardContent>
 							</Card>
 
+							{sortedSocialMedia &&
+								sortedSocialMedia.length > 0 && (
+									<Card sx={{ borderRadius: "5px" }}>
+										<CardContent>
+											<Stack
+												direction="column"
+												spacing={2}
+											>
+												<Typography variant="subtitle1">
+													Social Media
+												</Typography>
+
+												<Stack
+													direction="row"
+													spacing={2}
+												>
+													{sortedSocialMedia?.map(
+														(el, i) => (
+															<Link
+																href={el.link}
+																target="_blank"
+																key={i}
+																style={{
+																	textDecoration:
+																		"none",
+																	color: "inherit",
+																}}
+															>
+																{el.icon}
+															</Link>
+														),
+													)}
+												</Stack>
+											</Stack>
+										</CardContent>
+									</Card>
+								)}
 						</Stack>
 					</Grid>
 				</Grid>

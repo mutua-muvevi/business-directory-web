@@ -1,3 +1,5 @@
+
+
 import Iconify from "@/components/iconify";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
@@ -8,6 +10,11 @@ interface BusinessProps {
 	email: string;
 	phone: string;
 	logo: string;
+	location: {
+		city?: string;
+		country?: string;
+	},
+	isVerified: boolean
 }
 
 const GradientBox = styled(Box)(({ theme }) => ({
@@ -18,17 +25,21 @@ const GradientBox = styled(Box)(({ theme }) => ({
 	height: "35vh",
 }));
 
-const BusinessBanner = ({ name, phone, email, logo }: BusinessProps) => {
+const BusinessBanner = ({ name, phone, email, logo, location, isVerified}: BusinessProps) => {
 	console.log("logo", logo);
 
 	const items = [
 		{
-			icon: <Iconify icon="rivet-icons:phone" width={16} />,
+			icon: <Iconify icon="rivet-icons:phone" width={20} />,
 			value: phone,
 		},
 		{
-			icon: <Iconify icon="ic:baseline-email" width={16} />,
+			icon: <Iconify icon="ic:baseline-email" width={20} />,
 			value: email,
+		},
+		{
+			icon: <Iconify icon="subway:location-3" width={20} />,
+			value: `${location.city}, ${location.country}`,
 		},
 	];
 
@@ -49,9 +60,9 @@ const BusinessBanner = ({ name, phone, email, logo }: BusinessProps) => {
 						height={300}
 					/>
 					<Stack direction="column" spacing={2}>
-						<Typography variant="h2">{name}</Typography>
+						<Typography variant="h2" textAlign="left">{name}</Typography>
 
-						<Stack direction="row" spacing={2}>
+						<Stack direction="row" spacing={3}>
 							{items.map((item, i) => (
 								<Stack direction="row" spacing={2} key={i} alignItems="center">
 									{item.icon}
@@ -61,6 +72,15 @@ const BusinessBanner = ({ name, phone, email, logo }: BusinessProps) => {
 								</Stack>
 							))}
 						</Stack>
+
+						{
+							isVerified && (
+								<Stack direction="row" spacing={2} alignItems="center">
+									<Iconify icon="ic:baseline-check-circle" width={20} />
+									<Typography variant="body1">Verified</Typography>
+								</Stack>
+							)
+						}
 					</Stack>
 				</Stack>
 			</Container>

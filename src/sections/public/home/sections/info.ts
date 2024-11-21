@@ -34,10 +34,22 @@ export const businesses = [
 			country: "Kenya",
 		},
 		socialMedia: [
-			{ name: "facebook", link: "https://www.facebook.com/" },
-			{ name: "instagram", link: "https://www.instagram.com/" },
-			{ name: "linkedin", link: "https://www.linkedin.com/" },
-			{ name: "twitter", link: "https://twitter.com/" },
+			{
+				name: "facebook",
+				link: "https://www.facebook.com",
+			},
+			{
+				name: "instagram",
+				link: "https://www.instagram.com",
+			},
+			{
+				name: "linkedin",
+				link: "https://www.linkedin.com/company",
+			},
+			{
+				name: "twitter",
+				link: "https://twitter.com",
+			},
 		],
 		owner: "672d16ce0e75dfb18f67baa5",
 		photos: [
@@ -87,17 +99,20 @@ export const businesses = [
 		socialMedia: [
 			{
 				name: "facebook",
-				link: "https://www.facebook.com/techhubinnovations",
+				link: "https://www.facebook.com",
 			},
 			{
 				name: "instagram",
-				link: "https://www.instagram.com/techhubinnovations",
+				link: "https://www.instagram.com",
 			},
 			{
 				name: "linkedin",
-				link: "https://www.linkedin.com/company/techhubinnovations",
+				link: "https://www.linkedin.com/company",
 			},
-			{ name: "twitter", link: "https://twitter.com/techhubinnovations" },
+			{
+				name: "twitter",
+				link: "https://twitter.com",
+			},
 		],
 		owner: "92a57d16ce0e75dfb18f67baa5",
 		photos: [
@@ -147,19 +162,19 @@ export const businesses = [
 		socialMedia: [
 			{
 				name: "facebook",
-				link: "https://www.facebook.com/quickfixelectronics",
+				link: "https://www.facebook.com",
 			},
 			{
 				name: "instagram",
-				link: "https://www.instagram.com/quickfixelectronics",
+				link: "https://www.instagram.com",
 			},
 			{
 				name: "linkedin",
-				link: "https://www.linkedin.com/company/quickfixelectronics",
+				link: "https://www.linkedin.com",
 			},
 			{
 				name: "twitter",
-				link: "https://twitter.com/quickfixelectronics",
+				link: "https://twitter.com",
 			},
 		],
 		owner: "33e91d16ce0e75dfb18f67baa5",
@@ -210,19 +225,19 @@ export const businesses = [
 		socialMedia: [
 			{
 				name: "facebook",
-				link: "https://www.facebook.com/quickfixelectronics",
+				link: "https://www.facebook.com",
 			},
 			{
 				name: "instagram",
-				link: "https://www.instagram.com/quickfixelectronics",
+				link: "https://www.instagram.com",
 			},
 			{
 				name: "linkedin",
-				link: "https://www.linkedin.com/company/quickfixelectronics",
+				link: "https://www.linkedin.com/company",
 			},
 			{
 				name: "twitter",
-				link: "https://twitter.com/quickfixelectronics",
+				link: "https://twitter.com",
 			},
 		],
 		owner: "33e91d16ce0e75dfb18f67baa5",
@@ -273,17 +288,20 @@ export const businesses = [
 		socialMedia: [
 			{
 				name: "facebook",
-				link: "https://www.facebook.com/sunshineflorists",
+				link: "https://www.facebook.com",
 			},
 			{
 				name: "instagram",
-				link: "https://www.instagram.com/sunshineflorists",
+				link: "https://www.instagram.com",
 			},
 			{
 				name: "linkedin",
-				link: "https://www.linkedin.com/company/sunshineflorists",
+				link: "https://www.linkedin.com/company",
 			},
-			{ name: "twitter", link: "https://twitter.com/sunshineflorists" },
+			{
+				name: "twitter",
+				link: "https://twitter.com",
+			},
 		],
 		owner: "4b70d16ce0e75dfb18f67baa5",
 		photos: [
@@ -332,17 +350,20 @@ export const businesses = [
 		socialMedia: [
 			{
 				name: "facebook",
-				link: "https://www.facebook.com/sunshineflorists",
+				link: "https://www.facebook.com",
 			},
 			{
 				name: "instagram",
-				link: "https://www.instagram.com/sunshineflorists",
+				link: "https://www.instagram.com",
 			},
 			{
 				name: "linkedin",
-				link: "https://www.linkedin.com/company/sunshineflorists",
+				link: "https://www.linkedin.com/company",
 			},
-			{ name: "twitter", link: "https://twitter.com/sunshineflorists" },
+			{
+				name: "twitter",
+				link: "https://twitter.com",
+			},
 		],
 		owner: "4b70d16ce0e75dfb18f67baa5",
 		photos: [
@@ -384,17 +405,20 @@ export const businesses = [
 		socialMedia: [
 			{
 				name: "facebook",
-				link: "https://www.facebook.com/precisionlegaladvisors",
+				link: "https://www.facebook.com",
 			},
 			{
 				name: "instagram",
-				link: "https://www.instagram.com/precisionlegaladvisors",
+				link: "https://www.instagram.com",
 			},
 			{
 				name: "linkedin",
-				link: "https://www.linkedin.com/company/precisionlegaladvisors",
+				link: "https://www.linkedin.com/company",
 			},
-			{ name: "twitter", link: "https://twitter.com/precisionlegal" },
+			{
+				name: "twitter",
+				link: "https://twitter.com",
+			},
 		],
 		owner: "64d92d16ce0e75dfb18f67baa5",
 		photos: [

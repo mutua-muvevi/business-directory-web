@@ -43,6 +43,8 @@ const BusinessView = ({ params }: { params: { businessId: string } }) => {
 							phone={singleBusiness?.phone}
 							logo={singleBusiness?.logo}
 							email={singleBusiness?.email}
+							location={singleBusiness?.location}
+							isVerified={singleBusiness?.isVerified}
 						/>
 						<BusinessBody
 							description={singleBusiness?.description}
